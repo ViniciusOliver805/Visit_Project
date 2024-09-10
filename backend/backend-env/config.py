@@ -1,7 +1,8 @@
-# config.py
+import os
+
 DATABASE = {
-    'host': 'localhost',
-    'user': 'root',
-    'password': 'root',
-    'database': 'bdvisita'
+    'host': os.getenv ('localhost'),
+    'user': os.getenv ('root'),
+    'password': os.getenv ('root'),
+    'database': os.getenv ('bdvisita')
 }
