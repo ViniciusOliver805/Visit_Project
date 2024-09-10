@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="username">
+                <h1>Alexandre Alencar</h1>
+            </div>
+            <hr>
+            <div class="buttons-sidebar">
+                <div class="button-add">
+                    <button onclick="changeContent('add')">
+                        <i class="fa-regular fa-square-check icon-checkbox"></i> Adicionar Visita
+                    </button>
+                </div>
+                <div class="button-charts">
+                    <button>
+                        <i class="fa-solid fa-chart-line icon-checkbox"></i> Relatórios
+                    </button>
+                </div>
+                <div class="button-list">
+                    <button onclick="changeContent('list')">
+                        <i class="fa-solid fa-list icon-checkbox"></i> Lista de Visitas
+                    </button>
+                </div>
+            </div>
+            <div class="sidebar-logo">
+                <img src="./assets/Logo Pirelli.png" alt="Logo"> <!-- Substitua logo.png pelo caminho da sua logo -->
+            </div>
+        </div>
+        <div class="container-welcome" id="content-area">
+            <div class="top-text">
+                <h1>Bem vindo Alexandre</h1>
+            </div>
+            <div class="background-image">
+                <!-- <img src="./assets/car.jpeg" alt=""> -->
+            </div>
+            <div class="bottom-text">
+                <h1>Qual será o proximo local que vamos conhecer?</h1>
+                <button class="button-start">Start 🏁</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="add-visit.js"></script>
+</body>
+
+</html>

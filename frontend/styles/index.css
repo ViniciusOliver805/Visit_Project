@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Orbitron";
+  color: white;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #2a2a2a;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    
+}
+
+.sidebar {
+  height: 100vh;
+  width: 20%;
+  background-color: black;
+  border-radius: 12px;
+}
+
+.username h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  width: 240px;
+  height: 50px;
+  color: yellow;
+  font-size: 15px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: yellow;
+  width: 240px;
+  margin-left: 20px;
+  font-weight: 400;
+}
+
+.buttons-sidebar {
+  display: flex;
+  margin-left: auto;
+  flex-direction: column;
+  margin-top: 60px;
+  width: 200px;
+  height: 240px;
+  /* border: solid 2px green; */
+}
+
+.buttons-sidebar {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.button-charts, .button-list {
+    padding-top: 15px;
+}
+
+
+.button-add button,
+.button-charts button,
+.button-list button {
+    font-family: "Orbitron", sans-serif; 
+    width: 200px;
+    height: 45px;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: transparent;
+    border: solid 2px yellow;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.button-add button:hover,
+.button-charts button:hover,
+.button-list button:hover {
+    background-color: yellow; 
+    color: black; 
+}
+
+
+.icon-checkbox {
+    font-size: 20px; 
+    color: white; 
+    transition: color 0.3s; 
+}
+
+.button-add button:hover .icon-checkbox,
+.button-charts button:hover .icon-checkbox,
+.button-list button:hover .icon-checkbox {
+    color: black; 
+}
+
+.sidebar-logo {
+    margin-top: 150px;
+}
+
+.sidebar-logo img {
+    margin-left: 25px;
+    max-width: 80%; /* Garante que a logo não ultrapasse a largura do container */
+    height: auto; /* Mantém a proporção da logo */
+}
+
+.container-welcome {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  width: 80%;
+  
+}
+
+.background-image {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden; /* Para garantir que o conteúdo fique dentro do contêiner */
+}
+
+.background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/car.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5; /* Ajuste o valor de 0 (transparente) a 1 (opaco) */
+  z-index: -1; /* Mantém o fundo atrás do conteúdo */
+}
+
+
+.top-text h1 {
+  font-size:20px;
+  padding-top:20px;
+  padding-bottom: 30px;
+}
+
+.bottom-text {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.bottom-text h1 {
+  font-size:20px;
+  padding-top:20px;
+  padding-bottom: 10px;
+}
+
+.button-start {
+  width: 150px;
+  height: 50px;
+  font-family: "Orbitron", sans-serif; 
+  background-color: yellow;  /* Fundo amarelo */
+  color: black;  /* Texto preto */
+  border: none;  /* Remove a borda padrão */
+  padding: 10px 20px;  /* Ajusta o espaçamento interno do botão */
+  font-size: 24px;  /* Tamanho da fonte */
+  cursor: pointer;  /* Muda o cursor ao passar sobre o botão */
+  border-radius: 5px;  /* Bordas levemente arredondadas */
+  transition: transform 0.1s ease, background-color 0.3s ease;  /* Efeito de transição suave */
+}
+
+.button-start:hover {
+  background-color: #ffdd00;  /* Cor do fundo ao passar o mouse */
+}
+
+.button-start:active {
+  transform: translateY(2px);  /* Move o botão ligeiramente para baixo */
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);  /* Efeito de sombra para simular afundamento */
+}
+
+.form-container {
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin-bottom: 8px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+.form-group input, 
+.form-group select {
+  width: calc(70% - 16px);
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.form-group textarea {
+  width: calc(100% - 16px);
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 14px;
+}
+.form-group button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 5px;
+}
+.form-group button:hover {
+  background-color: #218838;
+}
+.form-group .secondary-button {
+  background-color: #007bff;
+}
+.form-group .secondary-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para a tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+th, td {
+  padding: 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #585858;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+caption {
+  font-size: 1em;
+  margin: 6px 0;
+}
+
+/* Estilo para os botões na tabela */
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin: 2px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button.secondary-button {
+  background-color: #008CBA;
+}
+
+button.secondary-button:hover {
+  background-color: #007bb5;
+}
+
+/* Estilo para a paginação */
+.pagination {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.pagination button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
